@@ -1,0 +1,188 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{color,soul}
+\usepackage{booktabs}
+
+\setlength\parindent{0pt}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=navy,
+    filecolor=magenta,      
+    urlcolor=blue,
+  }
+
+\def\l{\left}
+\def\r{\right}
+
+\newcommand{\f}{\frac}
+
+\pagestyle{fancy}
+
+\lhead{\fancyplain{}{prof mcandrew}}
+\chead{\textsc{BSTA001: HW07}}
+\rhead{\textsc{Spring 2021}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\begin{document}
+
+\ \\
+
+
+\section*{Q01}
+
+
+\textbf{Online communication}. A study suggests that the average college student spends 10 hours per week communicating with others online. You believe that this is an underestimate and decide to collect your own sample for a hypothesis test. You randomly sample 60 students from your dorm and find that on average they spent 13.5 hours a week communicating with others online. A friend of yours, who offers to help you with the hypothesis test, comes up with the following set of hypotheses.\\
+
+Define a random variable $X$ as the number of hours students spend communicating online.\\
+
+Indicate any errors you see.
+
+\begin{align*}
+  H_{\text{Null}} &: \bar{X} < 10 \text{ hours}\\
+  H_{\text{Alternative}} &: \bar{X} > 13 \text{ hours}
+\end{align*}
+
+\clearpage
+
+
+
+\section*{Q02}
+
+An independent random sample is selected from an approximately
+normal population with an unknown standard deviation. Find the p-value for the given set of hypotheses and T test statistic.
+Also determine if the null hypothesis would be rejected at $\alpha$ = 0.05
+
+\subsection*{2A}
+
+\begin{align*}
+  H_{\text{null}}&: \mu > \mu_{0}\\
+  H_{\text{Alternative}}&: \mu \le \mu_{0}\\
+  N = 11, \;  & \text{T-statistic} = 1.91
+\end{align*}
+
+\subsection*{2B}
+
+\begin{align*}
+  H_{\text{null}}&: \mu < \mu_{0}\\
+  H_{\text{Alternative}}&: \mu \ge \mu_{0}\\
+  N = 17, \;  & \text{T-statistic} = -3.45
+\end{align*}
+
+\subsection*{2C}
+
+\begin{align*}
+  H_{\text{null}}&: \mu = \mu_{0}\\
+  H_{\text{Alternative}}&: \mu \neq \mu_{0}\\
+  N = 7, \;  & \text{T-statistic} = 0.83
+\end{align*}
+
+\subsection*{2D}
+
+\begin{align*}
+  H_{\text{null}}&: \mu > \mu_{0}\\
+  H_{\text{Alternative}}&: \mu \le \mu_{0}\\
+  N = 28, \;  & \text{T-statistic} = 2.13
+\end{align*}
+
+
+\section*{Q02}
+
+\textbf{Mental health}. The 2010 General Social Survey asked the question: “For how many days during the past 30 days was your mental health, which includes stress, depression, and problems with emotions, not good?".
+Based on responses from 1,151 US residents, the survey reported a 95\% confidence interval of 3.40 to 4.24 days in 2010.
+(a) Interpret this interval in context of the data.
+(b) What does ``95\% confident'' mean? 
+(c) If a new survey were to be done with $500$ Americans, would the standard error of the estimate be larger,
+smaller, or about the same (assuming the standard deviation has remained constant since 2010)?
+
+\clearpage
+
+\section*{Q03}
+
+In the early 1990's, researchers in the UK collected data on traffic flow, number of shoppers, and traffic accident related emergency room admissions on Friday the 13th and the previous Friday, Friday the 6th.\\
+
+A summary of the number of cars that passed $10$ intersections is below
+
+\begin{table}[ht!]
+  \begin{tabular}{c|ccc}
+    \hline
+    Statistic & 6th & 13th & 13th minus 6th\\
+    \hline
+    Mean      & 128,385  & 126,550 & -1,835 \\
+    Std Dev.  & 7,259    & 7,664   & 1,176 \\
+    Number of intersections & 10 & 10 & 10 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+We will use a two-sample t-test to compare the mean number of cars passing intersections on the 6th and the 13th.
+The two-sample t-test is defined as
+
+\begin{align}
+  t_{\text{two-sample}} = \dfrac{\bar{ X } - \bar{ Y }}{ S }
+\end{align}
+
+where $X$ is a random variable counting the number of cars that pass an intersection on the 6th, $Y$ counting the number of cars that pass an intersection on the 13th.
+We can compute the standard deviation $(S)$ for the difference between $X$ and $Y$ with the following formula.
+
+\begin{align}
+  S = \sqrt{ \frac{s_{X}^{2}}{n_{X}} + \frac{s_{Y}^{2}}{n_{Y}} }
+\end{align}
+
+where $s_{X}$ and $s_{Y}$ are the standrad deviations of the random variables $X$ and $Y$, and $n_{X}$ and $n_{Y}$ are the number of observations collected for random variables $X$ and $Y$.
+The degrees of freedom for the above test is the smaller of $n_{X}-1$ and $n_{Y}-1$.\\
+
+(a) Please define a statistical hypothesis that evaluates whether the number of cars passing intersections on Friday the 6th is different than the number on Friday the 13th.
+(b) Calculate the test statistic and the p-value.
+(c) What is the conclusion of the hypothesis test?
+(d) Interpret the p-value in this context.
+
+\clearpage
+
+\section*{Q04}
+
+A group of researchers are interested in the possible effects of distracting stimuli during eating, such as an increase or decrease in the amount of food consumption. To test this hypothesis, they monitored food intake for a group of 44 patients who were randomized into two equal groups. The treatment group ate lunch while playing solitaire, and the control group ate lunch without any added distractions. Patients in the treatment group ate 52.1 grams of biscuits, with a standard deviation of 45.1 grams, and patients in the control group ate 27.1 grams of biscuits, with a standard deviation of 26.4 grams. Do these data provide convincing evidence that the average food intake (measured in amount of biscuits consumed) is different for the patients in the treatment group? Assume that conditions for inference are satisfied
+
+\vspace{1in}
+
+
+\section*{Q04}
+
+In recent years, widespread outbreaks of avian influenza have posed a global threat to both poultry production and human health. One strategy being explored by researchers involves developing chickens that are genetically resistant to infection. In 2011, a team of investigators reported in \textit{Science} that they had successfully generated transgenic chickens that are resistant to the virus.\\
+
+As a part of assessing whether the genetic modification might be hazardous to the health of the chicks, hatch weights between transgenic chicks and non-transgenic chicks were collected. Does the following data suggest that there is a difference in hatch weights between transgenic and non-transgenic chickens?\\
+
+Use a two-sample t test like in Q03. 
+
+
+\begin{table}[ht!]
+  \begin{tabular}{c|cc}
+    \hline
+    Statistic & transgenic chicks (grams) & non-transgenic chicks (grams)\\
+    \hline
+    Mean      & 45.14   & 44.99 \\
+    Std Dev.  & 3.32    & 4.57 \\
+    Number of chicks & 54 & 54  \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\clearpage
+
+\section*{Q05}
+
+
+
+
+\end{document}
